@@ -1,0 +1,17 @@
+{
+  "name": "pregao-rocha-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page de alta conversão para o Pregão Rocha focada na compra de móveis usados.",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "pregao-rocha",
+    "moveis-usados",
+    "goiania",
+    "landing-page"
+  ],
+  "author": "Pregão Rocha",
+  "license": "ISC"
+}
