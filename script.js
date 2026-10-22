@@ -1,65 +1,62 @@
 /**
- * PREGÃO ROCHA — LANDING PAGE SCRIPTS
- * Motion design sutil, acessibilidade e controle inteligente do botão WhatsApp
+ * PREGÃO ROCHA — IMPACTO COMERCIAL
+ * Scripts da proposta alternativa: barra móvel inteligente e scroll reveal suave
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const heroCtaButton = document.getElementById('heroCtaButton');
-  const floatingBar = document.getElementById('floatingBar');
+  const heroMainCta = document.getElementById('heroMainCta');
+  const mobileStickyBar = document.getElementById('mobileStickyBar');
 
-  if (!floatingBar || !heroCtaButton) return;
+  if (!mobileStickyBar || !heroMainCta) return;
 
-  // Usa IntersectionObserver para mostrar a barra flutuante mobile de forma inteligente
-  // A barra só surge quando o botão principal do hero é rolado para fora do campo visual
+  // Barra flutuante só surge quando o botão principal sai do campo de visão
   if ('IntersectionObserver' in window) {
-    const ctaObserver = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Quando o botão principal está visível, recolhe a barra inferior
-          floatingBar.classList.remove('is-visible');
+          mobileStickyBar.classList.remove('is-shown');
         } else {
-          // Quando o usuário rolou além do hero, exibe a barra com ação imediata
-          floatingBar.classList.add('is-visible');
+          mobileStickyBar.classList.add('is-shown');
         }
       });
     }, {
       root: null,
-      threshold: 0.15
+      threshold: 0.1
     });
 
-    ctaObserver.observe(heroCtaButton);
+    observer.observe(heroMainCta);
   } else {
-    // Fallback para navegadores legados
+    // Fallback tradicional
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 420) {
-        floatingBar.classList.add('is-visible');
+      if (window.scrollY > 380) {
+        mobileStickyBar.classList.add('is-shown');
       } else {
-        floatingBar.classList.remove('is-visible');
+        mobileStickyBar.classList.remove('is-shown');
       }
     }, { passive: true });
   }
 
-  // Animação de revelação suave durante o scroll para cartões de móveis e etapas
-  const revealElements = document.querySelectorAll('.timeline-step-card, .furniture-card, .coverage-banner-box');
-  
+  // Revelação progressiva das seções durante a rolagem (respeitando prefers-reduced-motion)
+  const revealCards = document.querySelectorAll('.furniture-editorial-card, .timeline-block, .region-box-layout');
+
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const scrollRevealObserver = new IntersectionObserver((entries, observer) => {
+    const revealObserver = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
           entry.target.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-          observer.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
     }, {
       threshold: 0.1
     });
 
-    revealElements.forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      scrollRevealObserver.observe(el);
+    revealCards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      revealObserver.observe(card);
     });
   }
 });
