@@ -1,19 +1,28 @@
 /* ==========================================================================
-   PREGÃO ROCHA — IMPACTO COMERCIAL (SEGUNDO MODELO DE LANDING PAGE)
-   Direção de Arte: Editorial Publicitário, Fundo Claro, Tipografia Massiva,
-   Faixas Vermelhas de Alto Impacto, Colagens Fotográficas e Movimento Suave.
+   PREGÃO ROCHA — DIREÇÃO VISUAL: VERDE POSITIVO, LUMINOSO E COMERCIAL
+   Feedback do Cliente:
+   - Verde como protagonista da comunicação
+   - Chamada: "COMPRAMOS SEU MÓVEL USADO" em letras grandes verdes
+   - Destaque comercial: "PAGAMENTO IMEDIATO"
+   - Composição fotográfica reconhecível: Sofá, Geladeira e Armário
+   - Fim dos blocos escuros e pretos/vermelhos pesados
+   - Estética solar, positiva, acessível e profissional
 
-   Paleta Oficial:
-   - Vermelho Comercial Dominante: #ED1C24 (Hover: #C9141B)
-   - Preto Profundo: #050505
-   - Branco: #FFFFFF
-   - Cinza-Claro de Fundo: #F8F9FA e #F1F2F2
-   - Azul-Marinho de Apoio: #27364A
-   - Verde Oficial WhatsApp: #25D366 (Hover: #1EBE5D)
-   - Verde de Apoio: #7AAE47
+   Paleta de Cores Positiva:
+   - Verde Principal: #16803C (Dark: #0E5E2A)
+   - Verde Vibrante: #25C765
+   - Verde WhatsApp Oficial: #25D366 (Hover: #1EBE5D, Active: #159847)
+   - Verde-Claro de Fundo: #E8F7EC e #F0FDF4
+   - Branco Puro: #FFFFFF
+   - Cinza-Claro Suave: #F4F6F5 e #F9FAFB
+   - Azul-Marinho Institucional: #27364A
+   - Texto Preto Suave: #202820
+   - Cinza de Apoio: #4B5563
+   - Borda Sutil: #E5E7EB
+   - Vermelho: Apenas acentos pontuais (#ED1C24)
    ========================================================================== */
 
-/* 1. RESET & DESIGN TOKENS */
+/* 1. RESET E DESIGN TOKENS */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -21,35 +30,36 @@
 }
 
 :root {
-  --color-red: #ED1C24;
-  --color-red-hover: #C9141B;
-  --color-red-light: #FFF0F1;
-  --color-black: #050505;
-  --color-white: #FFFFFF;
-  --color-navy: #27364A;
+  --color-green-primary: #16803C;
+  --color-green-dark: #0E5E2A;
+  --color-green-vibrant: #25C765;
+  --color-green-light: #E8F7EC;
+  --color-green-surface: #F0FDF4;
   --color-whatsapp: #25D366;
   --color-whatsapp-hover: #1EBE5D;
   --color-whatsapp-active: #159847;
-  --color-brand-green: #7AAE47;
-  --color-gray-bg: #F8F9FA;
+  --color-white: #FFFFFF;
+  --color-gray-bg: #F4F6F5;
   --color-gray-card: #FFFFFF;
   --color-gray-border: #E5E7EB;
-  --color-gray-text: #4B5563;
-  --color-gray-light: #F1F2F2;
+  --color-text-dark: #202820;
+  --color-text-muted: #4B5563;
+  --color-navy: #27364A;
+  --color-red-accent: #ED1C24;
 
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-impact: "Impact", "Arial Black", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Arial Black", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-  --shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
-  --shadow-wa: 0 10px 30px rgba(37, 211, 102, 0.4);
-  --shadow-red: 0 10px 25px rgba(237, 28, 36, 0.35);
+  --shadow-sm: 0 2px 6px rgba(22, 128, 60, 0.06);
+  --shadow-card: 0 10px 25px -5px rgba(22, 128, 60, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 18px 32px -8px rgba(22, 128, 60, 0.16);
+  --shadow-wa: 0 10px 30px rgba(37, 211, 102, 0.42);
+  --shadow-green-glow: 0 8px 24px rgba(37, 199, 101, 0.35);
 
-  --radius-xs: 4px;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
   --radius-pill: 9999px;
 
   --transition-fast: 0.18s ease;
@@ -62,19 +72,19 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body.impact-editorial-body {
+body.green-positive-theme {
   font-family: var(--font-family);
   background-color: var(--color-gray-bg);
-  color: var(--color-black);
+  color: var(--color-text-dark);
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  padding-bottom: 74px; /* Espaço para barra flutuante mobile */
+  padding-bottom: 74px; /* Barra fixa mobile */
 }
 
 @media (min-width: 820px) {
-  body.impact-editorial-body {
+  body.green-positive-theme {
     padding-bottom: 0;
   }
 }
@@ -85,12 +95,12 @@ img {
   display: block;
 }
 
-/* Acessibilidade: Skip link */
+/* Acessibilidade */
 .skip-link {
   position: absolute;
   top: -60px;
   left: 16px;
-  background: var(--color-black);
+  background: var(--color-green-primary);
   color: var(--color-white);
   padding: 10px 18px;
   z-index: 9999;
@@ -102,7 +112,7 @@ img {
 
 .skip-link:focus {
   top: 16px;
-  outline: 3px solid var(--color-red);
+  outline: 3px solid var(--color-green-vibrant);
 }
 
 .container {
@@ -114,16 +124,16 @@ img {
   padding-right: 20px;
 }
 
-/* 2. TOP BAR INSTITUCIONAL */
-.top-channel-bar {
-  background-color: var(--color-black);
+/* 2. TOP BAR VERDE POSITIVA */
+.top-positive-bar {
+  background-color: var(--color-green-primary);
   color: var(--color-white);
-  padding: 8px 0;
-  font-size: 0.82rem;
-  border-bottom: 2px solid var(--color-red);
+  padding: 9px 0;
+  font-size: 0.84rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.top-channel-container {
+.top-bar-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,70 +142,75 @@ img {
 }
 
 @media (min-width: 768px) {
-  .top-channel-container {
+  .top-bar-flex {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
-.channel-brand-badge {
+.top-tag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-weight: 800;
+  font-size: 0.76rem;
   letter-spacing: 0.05em;
-  color: var(--color-white);
-  font-size: 0.74rem;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
 }
 
-.live-dot {
+.pulse-green-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--color-red);
-  animation: pulse-red 2s infinite ease-in-out;
+  background-color: var(--color-green-vibrant);
+  box-shadow: 0 0 8px #25C765;
+  animation: pulse-dot 2s infinite ease-in-out;
 }
 
-@keyframes pulse-red {
+@keyframes pulse-dot {
   0% { transform: scale(0.9); opacity: 0.8; }
   50% { transform: scale(1.3); opacity: 1; }
   100% { transform: scale(0.9); opacity: 0.8; }
 }
 
-.channel-text strong {
-  color: var(--color-whatsapp);
+.top-message strong {
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.channel-city-tag {
-  color: #9CA3AF;
-  font-size: 0.76rem;
-  letter-spacing: 0.03em;
+.top-locations {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
-/* 3. CABEÇALHO EDITORIAL CLARO */
-.editorial-header {
+/* 3. CABEÇALHO LUMINOSO */
+.main-header {
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-gray-border);
   padding: 14px 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
-.header-container {
+.header-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.brand {
+.brand-group {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.brand-monogram {
+.brand-symbol {
   width: 44px;
   height: 44px;
   flex-shrink: 0;
@@ -207,83 +222,82 @@ img {
   display: block;
 }
 
-.brand-info {
+.brand-labels {
   display: flex;
   flex-direction: column;
 }
 
-.brand-title {
+.brand-main-name {
   font-size: 1.45rem;
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: var(--color-black);
+  color: var(--color-green-primary);
   line-height: 1;
 }
 
-.brand-subtitle {
-  font-size: 0.72rem;
+.brand-sub-name {
+  font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.06em;
-  color: var(--color-red);
+  color: var(--color-navy);
   margin-top: 3px;
 }
 
-.header-action-button {
+.header-wa-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-green-light);
+  color: var(--color-green-primary);
   text-decoration: none;
   font-weight: 800;
   font-size: 0.92rem;
   padding: 8px 18px;
   border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-green-primary);
   transition: all var(--transition-normal);
-  border: 1.5px solid var(--color-black);
 }
 
-.header-action-button:hover {
+.header-wa-pill:hover {
   background-color: var(--color-whatsapp);
   border-color: var(--color-whatsapp);
   color: var(--color-white);
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  box-shadow: var(--shadow-green-glow);
   transform: translateY(-1px);
 }
 
 .icon-wa {
   width: 18px;
   height: 18px;
-  color: var(--color-whatsapp);
+  color: var(--color-green-primary);
   transition: color var(--transition-fast);
 }
 
-.header-action-button:hover .icon-wa {
+.header-wa-pill:hover .icon-wa {
   color: var(--color-white);
 }
 
-/* 4. HERO SECTION: IMPACTO COMERCIAL EDITORIAL (Fundo Claro, Tipografia Massiva, Colagem) */
-.hero-impact {
+/* 4. HERO SECTION: VERDE POSITIVO COM COMPOSIÇÃO FOTOGRÁFICA RECONHECÍVEL */
+.hero-positive-section {
   position: relative;
-  background-color: var(--color-white);
-  padding: 48px 0 56px;
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-green-surface) 100%);
+  padding: 48px 0 60px;
   border-bottom: 1px solid var(--color-gray-border);
   overflow: hidden;
 }
 
-.hero-grid-bg {
+.hero-ambience-glow {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+  top: -120px;
+  right: -100px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 199, 101, 0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
-.hero-layout {
+.hero-container-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
@@ -293,132 +307,169 @@ img {
 }
 
 @media (min-width: 980px) {
-  .hero-layout {
-    grid-template-columns: 1.1fr 0.9fr;
+  .hero-container-grid {
+    grid-template-columns: 1.15fr 0.85fr;
     gap: 48px;
   }
 }
 
-.hero-narrative {
+.hero-text-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.hero-tag-wrap {
+.badge-opportunity {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-green-light);
+  color: var(--color-green-primary);
+  border: 1px solid rgba(22, 128, 60, 0.25);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
   margin-bottom: 20px;
 }
 
-.tag-kicker {
-  display: inline-block;
-  background: var(--color-black);
-  color: var(--color-white);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  padding: 6px 14px;
-  border-radius: var(--radius-xs);
-  text-transform: uppercase;
+.badge-icon-check {
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: var(--color-green-primary);
 }
 
-.headline-block {
-  margin-bottom: 22px;
+/* Chamada Comercial: Letras Grandes em Verde */
+.headline-hero-group {
+  margin-bottom: 24px;
+  width: 100%;
 }
 
-.kicker-question {
+.headline-intro {
   display: block;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
-  color: #374151;
+  color: var(--color-navy);
   letter-spacing: -0.01em;
-  line-height: 1.25;
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
-.main-statement {
+.headline-primary-green {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 10px;
-  line-height: 0.95;
-  margin-bottom: 14px;
+  flex-direction: column;
+  line-height: 1;
+  margin-bottom: 18px;
 }
 
-.statement-fill {
-  font-size: 3.4rem;
+.word-compramos {
+  font-size: 2.8rem;
   font-weight: 900;
-  letter-spacing: -0.04em;
-  color: var(--color-black);
-  font-family: var(--font-impact);
+  letter-spacing: -0.03em;
+  color: var(--color-green-primary);
   text-transform: uppercase;
+  font-family: var(--font-display);
 }
 
-.statement-accent {
-  font-size: 3.8rem;
+.word-target {
+  font-size: 3.2rem;
   font-weight: 900;
-  letter-spacing: -0.04em;
-  color: var(--color-red);
-  font-family: var(--font-impact);
+  letter-spacing: -0.03em;
+  color: var(--color-green-primary);
   text-transform: uppercase;
+  font-family: var(--font-display);
   text-decoration: underline;
-  text-decoration-color: var(--color-red);
+  text-decoration-color: var(--color-green-vibrant);
   text-underline-offset: 6px;
 }
 
 @media (min-width: 768px) {
-  .kicker-question {
-    font-size: 1.85rem;
+  .headline-intro {
+    font-size: 1.6rem;
   }
-  .statement-fill {
+  .word-compramos {
+    font-size: 4.4rem;
+  }
+  .word-target {
     font-size: 4.8rem;
-  }
-  .statement-accent {
-    font-size: 5.4rem;
   }
 }
 
-.statement-seal {
+/* Card de Destaque: Pagamento Imediato */
+.payment-highlight-card {
+  position: relative;
+  background: var(--color-white);
+  border: 2px solid var(--color-green-vibrant);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  box-shadow: 0 6px 18px rgba(37, 199, 101, 0.18);
+  max-width: 480px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.payment-badge-tag {
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  background-color: var(--color-green-primary);
+  color: var(--color-white);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.payment-main-row {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.seal-line {
+.icon-cash-instant {
   width: 28px;
-  height: 4px;
-  background-color: var(--color-red);
+  height: 28px;
+  color: var(--color-green-primary);
+  flex-shrink: 0;
 }
 
-.seal-text {
-  font-size: 1.05rem;
+.payment-text {
+  font-size: 1.45rem;
   font-weight: 900;
-  letter-spacing: 0.04em;
-  color: var(--color-black);
-  text-transform: uppercase;
+  color: var(--color-green-primary);
+  letter-spacing: -0.01em;
 }
 
-.hero-lead-text {
+.payment-disclaimer {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.hero-supporting-text {
   font-size: 1.2rem;
-  color: var(--color-gray-text);
+  color: var(--color-text-muted);
   line-height: 1.55;
-  max-width: 540px;
-  margin-bottom: 32px;
+  max-width: 520px;
+  margin-bottom: 30px;
 }
 
-/* Bloco de Conversão Principal */
-.hero-conversion-box {
+/* Botão de WhatsApp em Verde Oficial com Pulso */
+.hero-cta-action-area {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-.btn-whatsapp-massive {
+.btn-wa-hero-positive {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   background-color: var(--color-whatsapp);
   color: var(--color-white);
   text-decoration: none;
@@ -426,50 +477,49 @@ img {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-wa);
   border: 2px solid rgba(255, 255, 255, 0.4);
-  max-width: 520px;
+  max-width: 500px;
   width: 100%;
   min-height: 72px;
   overflow: hidden;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal), background-color var(--transition-normal);
 }
 
-.btn-whatsapp-massive:hover {
+.btn-wa-hero-positive:hover {
   background-color: var(--color-whatsapp-hover);
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 14px 34px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.5);
 }
 
-.btn-whatsapp-massive:active {
+.btn-wa-hero-positive:active {
   background-color: var(--color-whatsapp-active);
   transform: translateY(0);
 }
 
-.btn-whatsapp-massive:focus-visible {
-  outline: 4px solid var(--color-black);
-  outline-offset: 3px;
-}
-
-.btn-icon-area {
-  flex-shrink: 0;
+.btn-icon-circle {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.icon-wa-xl {
-  width: 38px;
-  height: 38px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+.icon-wa-hero {
+  width: 28px;
+  height: 28px;
+  color: var(--color-white);
 }
 
-.btn-copy-area {
+.btn-text-content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   text-align: left;
 }
 
-.btn-headline {
+.btn-main-prompt {
   font-size: 1.25rem;
   font-weight: 900;
   letter-spacing: 0.01em;
@@ -477,32 +527,32 @@ img {
   color: var(--color-white);
 }
 
-.btn-footnote {
+.btn-secondary-prompt {
   font-size: 0.8rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.92);
-  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-top: 2px;
 }
 
-.btn-arrow-area {
-  flex-shrink: 0;
+.icon-btn-arrow {
   width: 24px;
   height: 24px;
   color: var(--color-white);
+  flex-shrink: 0;
   transition: transform var(--transition-normal);
 }
 
-.btn-whatsapp-massive:hover .btn-arrow-area {
+.btn-wa-hero-positive:hover .icon-btn-arrow {
   transform: translateX(4px);
 }
 
-.btn-shine-effect {
+.btn-glow-pulse {
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   animation: btn-shine 3.5s infinite;
 }
 
@@ -512,250 +562,250 @@ img {
   100% { left: 100%; }
 }
 
-.hero-region-flag {
+.region-info-tag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 0.9rem;
-  color: var(--color-gray-text);
-  background-color: var(--color-gray-light);
+  color: var(--color-text-muted);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-border);
   padding: 8px 14px;
   border-radius: var(--radius-sm);
-  max-width: 520px;
+  max-width: 500px;
 }
 
-.icon-geo {
+.icon-pin-green {
   width: 18px;
   height: 18px;
-  color: var(--color-red);
+  color: var(--color-green-primary);
   flex-shrink: 0;
 }
 
-.hero-region-flag strong {
-  color: var(--color-black);
+.region-info-tag strong {
+  color: var(--color-green-primary);
 }
 
-/* Coluna Direita: Colagem Fotográfica Editorial */
-.hero-collage-wrapper {
+/* Coluna Direita: Composição Fotográfica com Sofá, Geladeira e Armário */
+.hero-visual-composition {
   position: relative;
   width: 100%;
 }
 
-.collage-grid {
+.composition-container {
   position: relative;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.1fr 0.9fr;
   grid-template-rows: auto auto;
-  gap: 16px;
+  gap: 14px;
 }
 
-.collage-card {
+.comp-card {
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  border: 1px solid var(--color-gray-border);
+  border: 2px solid var(--color-white);
   background-color: #E5E7EB;
 }
 
-.card-large {
+.card-sofa {
   grid-row: span 2;
   height: 380px;
 }
 
-.card-small-top {
-  height: 182px;
+.card-fridge {
+  height: 183px;
+  border-color: var(--color-green-vibrant);
 }
 
-.card-small-bottom {
-  height: 182px;
+.card-wardrobe {
+  height: 183px;
 }
 
-.collage-img {
+.comp-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.collage-card:hover .collage-img {
+.comp-card:hover .comp-img {
   transform: scale(1.04);
 }
 
-.collage-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: rgba(5, 5, 5, 0.88);
-  color: var(--color-white);
-  padding: 6px 12px;
-  border-radius: var(--radius-pill);
-  font-size: 0.78rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.badge-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--color-whatsapp);
-}
-
-.collage-caption {
+.comp-chip {
   position: absolute;
   bottom: 8px;
   left: 8px;
   right: 8px;
   background: rgba(255, 255, 255, 0.94);
-  padding: 4px 10px;
+  backdrop-filter: blur(4px);
+  padding: 5px 10px;
   border-radius: var(--radius-xs);
   font-size: 0.74rem;
   font-weight: 800;
-  color: var(--color-black);
-  text-align: center;
-}
-
-/* Selo Vermelho Flutuante */
-.floating-commercial-stamp {
-  position: absolute;
-  bottom: -16px;
-  right: 16px;
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  background-color: var(--color-red);
-  color: var(--color-white);
+  color: var(--color-navy);
   display: flex;
   align-items: center;
+  gap: 6px;
   justify-content: center;
-  box-shadow: var(--shadow-red);
+}
+
+.comp-chip.chip-highlight {
+  background: var(--color-green-primary);
+  color: var(--color-white);
+}
+
+.chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-green-vibrant);
+}
+
+.chip-highlight .chip-dot {
+  background-color: var(--color-white);
+}
+
+/* Selo Positivo de Avaliação */
+.positive-guarantee-badge {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  background-color: var(--color-green-primary);
+  color: var(--color-white);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-hover);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--color-white);
   z-index: 5;
-  border: 3px solid var(--color-white);
-  transform: rotate(-8deg);
-  animation: float-stamp 3.5s ease-in-out infinite;
 }
 
-@keyframes float-stamp {
-  0%, 100% { transform: rotate(-8deg) translateY(0); }
-  50% { transform: rotate(-6deg) translateY(-5px); }
+.badge-icon-star {
+  color: #FCD34D;
+  font-size: 1.1rem;
 }
 
-.stamp-inner {
-  text-align: center;
+.badge-copy {
   display: flex;
   flex-direction: column;
   line-height: 1.05;
 }
 
-.stamp-sub {
-  font-size: 0.6rem;
-  font-weight: 800;
+.badge-copy strong {
+  font-size: 0.78rem;
   letter-spacing: 0.04em;
 }
 
-.stamp-main {
-  font-size: 1.15rem;
-  font-weight: 900;
-  letter-spacing: -0.02em;
+.badge-copy span {
+  font-size: 0.68rem;
+  color: var(--color-green-light);
 }
 
-/* 5. FAIXA GRÁFICA DE IMPACTO (MARQUEE VERMELHO CONTÍNUO) */
-.impact-marquee-bar {
-  background-color: var(--color-red);
+/* 5. FAIXA VERDE COMERCIAL POSITIVA (TICKER) */
+.positive-ticker-bar {
+  background-color: var(--color-green-primary);
   color: var(--color-white);
-  padding: 14px 0;
+  padding: 12px 0;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(237, 28, 36, 0.25);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.marquee-track {
+.ticker-wrapper {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.marquee-content {
+.ticker-inner {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee-scroll 24s linear infinite;
+  animation: ticker-slide 26s linear infinite;
 }
 
-.marquee-item {
-  font-size: 1.05rem;
-  font-weight: 900;
-  letter-spacing: 0.05em;
+.ticker-item {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-right: 48px;
+  margin-right: 40px;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
-.bullet-star {
-  color: var(--color-white);
-  font-size: 0.9rem;
+.ticker-star {
+  color: var(--color-green-vibrant);
+  font-size: 0.85rem;
 }
 
-@keyframes marquee-scroll {
+@keyframes ticker-slide {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-/* 6. SEÇÃO DE MÓVEIS (RECONHECIMENTO VISUAL COM COLAGEM EDITORIAL) */
-.furniture-editorial-section {
+/* 6. SEÇÃO DE MÓVEIS (RECONHECIMENTO: SOFÁ, GELADEIRA, ARMÁRIO, MESAS) */
+.furniture-showcase-positive {
   padding: 72px 0;
   background-color: var(--color-white);
 }
 
-.section-editorial-header {
+.showcase-header {
   text-align: center;
   max-width: 780px;
   margin: 0 auto 48px;
 }
 
-.header-pre-title {
-  font-size: 0.82rem;
+.sub-kicker-green {
+  display: inline-block;
+  font-size: 0.8rem;
   font-weight: 900;
-  letter-spacing: 0.12em;
-  color: var(--color-red);
+  letter-spacing: 0.1em;
+  color: var(--color-green-primary);
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
-.header-display-title {
+.showcase-title {
   font-size: 2.2rem;
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: var(--color-black);
+  color: var(--color-navy);
   line-height: 1.2;
   margin-bottom: 12px;
 }
 
-.header-explanatory {
+.showcase-intro {
   font-size: 1.1rem;
-  color: var(--color-gray-text);
+  color: var(--color-text-muted);
   line-height: 1.5;
 }
 
-.furniture-editorial-grid {
+.furniture-gallery-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-  margin-bottom: 40px;
+  gap: 22px;
+  margin-bottom: 36px;
 }
 
-@media (min-width: 768px) {
-  .furniture-editorial-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 640px) {
+  .furniture-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.furniture-editorial-card {
+@media (min-width: 1024px) {
+  .furniture-gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gallery-card {
   background-color: var(--color-gray-bg);
   border: 1px solid var(--color-gray-border);
   border-radius: var(--radius-md);
@@ -765,154 +815,179 @@ img {
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-.furniture-editorial-card:hover {
+.gallery-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
-  border-color: var(--color-black);
+  border-color: var(--color-green-primary);
 }
 
-.furniture-photo-container {
+.featured-gallery-card {
+  border: 2px solid var(--color-green-vibrant);
+  background-color: var(--color-green-surface);
+}
+
+.card-media {
   position: relative;
-  height: 220px;
+  height: 200px;
   background-color: #E5E7EB;
   overflow: hidden;
 }
 
-.furniture-photo-container img {
+.card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
 }
 
-.furniture-editorial-card:hover .furniture-photo-container img {
+.gallery-card:hover .card-media img {
   transform: scale(1.05);
 }
 
-.category-index {
+.media-tag {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  background: var(--color-black);
+  top: 10px;
+  left: 10px;
+  background: rgba(22, 128, 60, 0.9);
   color: var(--color-white);
   font-size: 0.72rem;
   font-weight: 800;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: var(--radius-xs);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
-.furniture-details {
-  padding: 20px;
+.media-tag.tag-green {
+  background: var(--color-green-primary);
 }
 
-.category-title {
-  font-size: 1.15rem;
+.card-content {
+  padding: 18px 16px;
+}
+
+.item-title {
+  font-size: 1.1rem;
   font-weight: 800;
-  color: var(--color-black);
-  margin-bottom: 8px;
+  color: var(--color-navy);
+  margin-bottom: 6px;
   line-height: 1.25;
 }
 
-.category-desc {
-  font-size: 0.92rem;
-  color: var(--color-gray-text);
+.item-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
   line-height: 1.5;
 }
 
-/* Prompt de Avaliação */
-.evaluation-prompt-card {
-  background: linear-gradient(135deg, var(--color-black) 0%, #1A1A1A 100%);
+/* Banner Positivo */
+.positive-callout-card {
+  background: linear-gradient(135deg, var(--color-green-primary) 0%, var(--color-green-dark) 100%);
   border-radius: var(--radius-md);
-  padding: 24px 32px;
+  padding: 22px 28px;
   color: var(--color-white);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
   justify-content: space-between;
-  border-left: 6px solid var(--color-red);
+  box-shadow: var(--shadow-card);
 }
 
 @media (min-width: 860px) {
-  .evaluation-prompt-card {
+  .positive-callout-card {
     flex-direction: row;
   }
 }
 
-.prompt-text h4 {
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin-bottom: 4px;
+.callout-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.prompt-text p {
-  font-size: 0.95rem;
-  color: #D1D5DB;
+.callout-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-white);
 }
 
-.btn-prompt-whatsapp {
+.callout-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-grow: 1;
+}
+
+.callout-text strong {
+  font-size: 1.15rem;
+  color: var(--color-white);
+}
+
+.callout-text span {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-callout-wa {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background-color: var(--color-whatsapp);
-  color: var(--color-white);
+  gap: 8px;
+  background-color: var(--color-white);
+  color: var(--color-green-primary);
   text-decoration: none;
   font-weight: 800;
-  font-size: 0.95rem;
-  padding: 14px 24px;
+  font-size: 0.92rem;
+  padding: 12px 22px;
   border-radius: var(--radius-pill);
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   white-space: nowrap;
   transition: transform var(--transition-fast), background-color var(--transition-fast);
 }
 
-.btn-prompt-whatsapp:hover {
-  background-color: var(--color-whatsapp-hover);
+.btn-callout-wa:hover {
+  background-color: var(--color-green-vibrant);
+  color: var(--color-white);
   transform: translateY(-2px);
 }
 
-.icon-prompt-arrow {
+.icon-mini-arrow {
   width: 16px;
   height: 16px;
 }
 
-/* 7. SEÇÃO COMO FUNCIONA: 3 ETAPAS COM IDENTIDADE EDITORIAL */
-.editorial-steps-section {
+/* 7. SEÇÃO COMO FUNCIONA: 3 ETAPAS */
+.how-it-works-positive {
   padding: 76px 0;
   background-color: var(--color-gray-bg);
   border-top: 1px solid var(--color-gray-border);
 }
 
-.steps-intro {
+.how-header {
   text-align: center;
   max-width: 760px;
   margin: 0 auto 52px;
 }
 
-.steps-tag {
-  font-size: 0.82rem;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  color: var(--color-red);
-  text-transform: uppercase;
-}
-
-.steps-main-title {
+.how-title {
   font-size: 2.3rem;
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: var(--color-black);
+  color: var(--color-navy);
   margin-top: 6px;
   margin-bottom: 12px;
 }
 
-.steps-sub {
+.how-desc {
   font-size: 1.1rem;
-  color: var(--color-gray-text);
+  color: var(--color-text-muted);
 }
 
-.editorial-timeline {
+.steps-grid-positive {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
@@ -921,12 +996,12 @@ img {
 }
 
 @media (min-width: 860px) {
-  .editorial-timeline {
+  .steps-grid-positive {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.timeline-block {
+.step-card-pos {
   position: relative;
   background-color: var(--color-white);
   border: 1px solid var(--color-gray-border);
@@ -934,27 +1009,26 @@ img {
   padding: 36px 24px 28px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
-.timeline-block:hover {
+.step-card-pos:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
+  border-color: var(--color-green-primary);
 }
 
-/* Destaque máximo na etapa 2 */
-.timeline-block.block-spotlight {
-  border: 2px solid var(--color-red);
-  box-shadow: 0 10px 30px rgba(237, 28, 36, 0.12);
+.step-card-featured {
+  border: 2px solid var(--color-whatsapp);
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-green-surface) 100%);
 }
 
-.spotlight-tag {
+.featured-step-tag {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--color-red);
+  background-color: var(--color-whatsapp);
   color: var(--color-white);
   font-size: 0.68rem;
   font-weight: 900;
@@ -963,83 +1037,69 @@ img {
   border-bottom-left-radius: var(--radius-sm);
 }
 
-.block-number-watermark {
+.step-badge-number {
   position: absolute;
-  top: 8px;
-  right: 16px;
-  font-size: 4.8rem;
-  font-weight: 900;
-  line-height: 1;
-  color: rgba(5, 5, 5, 0.04);
-  font-family: var(--font-impact);
-  pointer-events: none;
-}
-
-.block-spotlight .block-number-watermark {
-  color: rgba(237, 28, 36, 0.08);
-}
-
-.block-header {
-  margin-bottom: 12px;
-}
-
-.block-pill {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 800;
-  background: var(--color-black);
-  color: var(--color-white);
-  padding: 3px 8px;
-  border-radius: var(--radius-xs);
-  letter-spacing: 0.04em;
-  margin-bottom: 10px;
-}
-
-.pill-whatsapp {
-  background: var(--color-whatsapp);
-}
-
-.block-action {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--color-black);
-  letter-spacing: -0.01em;
-}
-
-.block-text {
-  font-size: 0.96rem;
-  color: var(--color-gray-text);
-  line-height: 1.55;
-  margin-bottom: 16px;
-}
-
-.spotlight-badge {
-  margin-top: auto;
-  display: inline-flex;
+  top: 16px;
+  right: 18px;
+  width: 38px;
+  height: 38px;
+  background-color: var(--color-green-light);
+  color: var(--color-green-primary);
+  border-radius: 50%;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  background-color: #EBF8EE;
-  color: #166534;
-  padding: 6px 12px;
-  border-radius: var(--radius-pill);
-  font-size: 0.82rem;
-  font-weight: 700;
-  width: fit-content;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 900;
 }
 
-.icon-spotlight-wa {
-  width: 16px;
-  height: 16px;
-  color: var(--color-whatsapp);
+.badge-wa {
+  background-color: var(--color-whatsapp);
+  color: var(--color-white);
+}
+
+.step-icon-wrap {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-green-light);
+  color: var(--color-green-primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.step-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-wa-highlight {
+  background-color: var(--color-whatsapp);
+  color: var(--color-white);
+}
+
+.step-pos-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+}
+
+.step-pos-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
 }
 
 /* 8. ATENDIMENTO REGIONAL */
-.region-editorial-strip {
+.regional-coverage-positive {
   padding: 40px 0 60px;
   background-color: var(--color-gray-bg);
 }
 
-.region-box-layout {
+.coverage-box-positive {
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
@@ -1052,68 +1112,60 @@ img {
 }
 
 @media (min-width: 860px) {
-  .region-box-layout {
-    grid-template-columns: 70px 1fr auto;
-    gap: 28px;
+  .coverage-box-positive {
+    grid-template-columns: 64px 1fr auto;
+    gap: 26px;
   }
 }
 
-.region-map-marker {
-  width: 64px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.marker-circle {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-red-light);
-  border: 2px solid var(--color-red);
+.coverage-icon-badge {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-green-light);
+  border: 2px solid var(--color-green-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-red);
+  color: var(--color-green-primary);
 }
 
-.marker-circle svg {
-  width: 30px;
-  height: 30px;
+.coverage-icon-badge svg {
+  width: 28px;
+  height: 28px;
 }
 
-.region-content {
+.coverage-details {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.region-title {
+.coverage-heading {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--color-black);
+  color: var(--color-navy);
 }
 
-.region-cities {
+.coverage-city-lead {
   font-size: 1.15rem;
-  color: #1F2937;
+  color: var(--color-text-dark);
 }
 
-.region-cities strong {
-  color: var(--color-red);
+.coverage-city-lead strong {
+  color: var(--color-green-primary);
 }
 
-.region-sub {
+.coverage-subnote {
   font-size: 0.92rem;
-  color: var(--color-gray-text);
+  color: var(--color-text-muted);
 }
 
-.btn-region-query {
+.btn-coverage-positive {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  background-color: var(--color-black);
+  gap: 8px;
+  background-color: var(--color-green-primary);
   color: var(--color-white);
   text-decoration: none;
   font-weight: 800;
@@ -1124,83 +1176,76 @@ img {
   transition: background-color var(--transition-fast), transform var(--transition-fast);
 }
 
-.btn-region-query:hover {
-  background-color: var(--color-whatsapp);
+.btn-coverage-positive:hover {
+  background-color: var(--color-green-dark);
   transform: translateY(-2px);
 }
 
-.icon-arrow-tiny {
-  width: 16px;
-  height: 16px;
-}
-
-/* 9. CTA FINAL: FECHAMENTO DE ALTO IMPACTO (Fundo Preto com Vermelho e WhatsApp) */
-.final-closing-section {
+/* 9. CTA FINAL DE CONVERSÃO */
+.final-positive-cta {
   padding: 60px 0 80px;
   background-color: var(--color-white);
 }
 
-.closing-card {
+.final-box-card {
   position: relative;
-  background: var(--color-black);
-  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-green-primary) 0%, var(--color-green-dark) 100%);
+  border-radius: var(--radius-xl);
   padding: 56px 24px;
   text-align: center;
   color: var(--color-white);
   box-shadow: var(--shadow-hover);
   overflow: hidden;
-}
-
-.closing-graphic-stripe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: var(--color-red);
-}
-
-.closing-body {
-  position: relative;
-  z-index: 2;
-  max-width: 640px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
-.closing-kicker {
+.final-glow-corner {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+}
+
+.final-kicker-tag {
   display: inline-block;
   font-size: 0.82rem;
   font-weight: 900;
-  letter-spacing: 0.14em;
-  color: var(--color-red);
+  letter-spacing: 0.12em;
+  color: #FCD34D;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 
-.closing-headline {
-  font-size: 2.5rem;
+.final-headline-green {
+  font-size: 2.2rem;
   font-weight: 900;
   letter-spacing: -0.02em;
   color: var(--color-white);
-  line-height: 1.1;
-  margin-bottom: 16px;
-  font-family: var(--font-impact);
+  line-height: 1.15;
+  margin-bottom: 14px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
-  .closing-headline {
-    font-size: 3.4rem;
+  .final-headline-green {
+    font-size: 2.8rem;
   }
 }
 
-.closing-desc {
+.final-sub-prompt {
   font-size: 1.15rem;
-  color: #D1D5DB;
+  color: rgba(255, 255, 255, 0.95);
   line-height: 1.5;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
 }
 
-.btn-closing-whatsapp {
+.btn-final-whatsapp-massive {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1212,38 +1257,39 @@ img {
   font-weight: 900;
   padding: 18px 36px;
   border-radius: var(--radius-pill);
-  box-shadow: var(--shadow-wa);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 440px;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal), background-color var(--transition-normal);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.btn-closing-whatsapp:hover {
+.btn-final-whatsapp-massive:hover {
   background-color: var(--color-whatsapp-hover);
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.55);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
 }
 
-.icon-wa-closing {
+.icon-wa-final {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
 }
 
-.closing-direct-reminder {
+.final-reminder-note {
   font-size: 0.85rem;
-  color: #9CA3AF;
+  color: rgba(255, 255, 255, 0.85);
   margin-top: 22px;
 }
 
-/* 10. RODAPÉ EDITORIAL */
-.editorial-footer {
-  background-color: var(--color-black);
-  color: #9CA3AF;
+/* 10. RODAPÉ INSTITUCIONAL */
+.positive-footer {
+  background-color: var(--color-navy);
+  color: #D1D5DB;
   padding-top: 48px;
 }
 
-.footer-layout {
+.footer-content-row {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -1251,7 +1297,7 @@ img {
 }
 
 @media (min-width: 768px) {
-  .footer-layout {
+  .footer-content-row {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -1264,9 +1310,10 @@ img {
   letter-spacing: -0.01em;
 }
 
-.footer-sub {
+.footer-description {
   margin-top: 4px;
   font-size: 0.9rem;
+  color: #9CA3AF;
 }
 
 .footer-info-side p {
@@ -1279,26 +1326,26 @@ img {
   color: var(--color-white);
 }
 
-.footer-copyright-bar {
-  border-top: 1px solid #1F2937;
+.footer-bottom-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 18px 0;
   font-size: 0.82rem;
   text-align: center;
-  color: #6B7280;
+  color: #9CA3AF;
 }
 
-/* 11. BARRA FLUTUANTE MOBILE INTELIGENTE */
-.mobile-sticky-cta {
+/* 11. BARRA FLUTUANTE EM VERDE (MOBILE-FIRST) */
+.floating-mobile-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(5, 5, 5, 0.97);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 10px 14px;
-  border-top: 2px solid var(--color-red);
-  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.25);
+  border-top: 2px solid var(--color-whatsapp);
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.12);
   z-index: 999;
   transform: translateY(110%);
   opacity: 0;
@@ -1306,17 +1353,17 @@ img {
 }
 
 @media (min-width: 821px) {
-  .mobile-sticky-cta {
+  .floating-mobile-bar {
     display: none !important;
   }
 }
 
-.mobile-sticky-cta.is-shown {
+.floating-mobile-bar.is-shown {
   transform: translateY(0);
   opacity: 1;
 }
 
-.btn-mobile-sticky {
+.btn-float-action {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1329,38 +1376,38 @@ img {
   box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
 }
 
-.icon-wa-sticky {
+.icon-wa-float {
   width: 26px;
   height: 26px;
   flex-shrink: 0;
 }
 
-.mobile-sticky-labels {
+.float-text-box {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   text-align: left;
 }
 
-.sticky-main {
+.float-title {
   font-size: 0.95rem;
   font-weight: 900;
   letter-spacing: 0.01em;
   line-height: 1.15;
 }
 
-.sticky-sub {
+.float-desc {
   font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
 }
 
-.icon-chevron {
+.icon-float-chevron {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
 }
 
-/* 12. ANIMAÇÕES SUAVES & PREFERS-REDUCED-MOTION */
+/* 12. ANIMAÇÕES SUAVES E PREFERS-REDUCED-MOTION */
 .animate-fade {
   opacity: 0;
   animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -1398,36 +1445,39 @@ img {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .marquee-content,
-  .btn-shine-effect,
-  .live-dot,
-  .floating-commercial-stamp {
+  .ticker-inner,
+  .btn-glow-pulse,
+  .pulse-green-dot {
     animation: none !important;
   }
 }
 
 /* 13. RESPONSIVIDADE ESPECÍFICA (Telas 375px a 430px) */
 @media (max-width: 430px) {
-  .statement-fill {
-    font-size: 2.8rem;
+  .word-compramos {
+    font-size: 2.4rem;
   }
-  .statement-accent {
-    font-size: 3.2rem;
+  .word-target {
+    font-size: 2.6rem;
   }
-  .btn-headline {
+  .payment-text {
+    font-size: 1.25rem;
+  }
+  .btn-main-prompt {
     font-size: 1.05rem;
   }
-  .card-large {
-    height: 260px;
+  .card-sofa {
+    height: 250px;
   }
-  .card-small-top,
-  .card-small-bottom {
-    height: 122px;
+  .card-fridge,
+  .card-wardrobe {
+    height: 118px;
   }
-  .header-display-title {
+  .showcase-title,
+  .how-title {
     font-size: 1.75rem;
   }
-  .steps-main-title {
+  .final-headline-green {
     font-size: 1.75rem;
   }
 }

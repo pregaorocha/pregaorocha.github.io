@@ -1,22 +1,22 @@
 /**
- * PREGÃO ROCHA — IMPACTO COMERCIAL
- * Scripts da proposta alternativa: barra móvel inteligente e scroll reveal suave
+ * PREGÃO ROCHA — MODELO VERDE POSITIVO
+ * Comportamentos de UI leves, barra flutuante mobile e revelação suave ao rolar
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   const heroMainCta = document.getElementById('heroMainCta');
-  const mobileStickyBar = document.getElementById('mobileStickyBar');
+  const floatingMobileBar = document.getElementById('floatingMobileBar');
 
-  if (!mobileStickyBar || !heroMainCta) return;
+  if (!floatingMobileBar || !heroMainCta) return;
 
-  // Barra flutuante só surge quando o botão principal sai do campo de visão
+  // Barra móvel inferior surge de forma limpa quando o botão principal sai da viewport
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          mobileStickyBar.classList.remove('is-shown');
+          floatingMobileBar.classList.remove('is-shown');
         } else {
-          mobileStickyBar.classList.add('is-shown');
+          floatingMobileBar.classList.add('is-shown');
         }
       });
     }, {
@@ -26,18 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     observer.observe(heroMainCta);
   } else {
-    // Fallback tradicional
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 380) {
-        mobileStickyBar.classList.add('is-shown');
+      if (window.scrollY > 360) {
+        floatingMobileBar.classList.add('is-shown');
       } else {
-        mobileStickyBar.classList.remove('is-shown');
+        floatingMobileBar.classList.remove('is-shown');
       }
     }, { passive: true });
   }
 
-  // Revelação progressiva das seções durante a rolagem (respeitando prefers-reduced-motion)
-  const revealCards = document.querySelectorAll('.furniture-editorial-card, .timeline-block, .region-box-layout');
+  // Revelação progressiva das seções durante a rolagem (respeitando acessibilidade)
+  const revealCards = document.querySelectorAll('.gallery-card, .step-card-pos, .coverage-box-positive');
 
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const revealObserver = new IntersectionObserver((entries, obs) => {
