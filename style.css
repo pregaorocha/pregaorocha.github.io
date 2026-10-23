@@ -1,25 +1,12 @@
 /* ==========================================================================
-   PREGÃO ROCHA — DIREÇÃO VISUAL: VERDE POSITIVO, LUMINOSO E COMERCIAL
-   Feedback do Cliente:
-   - Verde como protagonista da comunicação
-   - Chamada: "COMPRAMOS SEU MÓVEL USADO" em letras grandes verdes
-   - Destaque comercial: "PAGAMENTO IMEDIATO"
-   - Composição fotográfica reconhecível: Sofá, Geladeira e Armário
-   - Fim dos blocos escuros e pretos/vermelhos pesados
-   - Estética solar, positiva, acessível e profissional
-
-   Paleta de Cores Positiva:
-   - Verde Principal: #16803C (Dark: #0E5E2A)
-   - Verde Vibrante: #25C765
-   - Verde WhatsApp Oficial: #25D366 (Hover: #1EBE5D, Active: #159847)
-   - Verde-Claro de Fundo: #E8F7EC e #F0FDF4
-   - Branco Puro: #FFFFFF
-   - Cinza-Claro Suave: #F4F6F5 e #F9FAFB
-   - Azul-Marinho Institucional: #27364A
-   - Texto Preto Suave: #202820
-   - Cinza de Apoio: #4B5563
-   - Borda Sutil: #E5E7EB
-   - Vermelho: Apenas acentos pontuais (#ED1C24)
+   PREGÃO ROCHA — HERO REFINADO & DIREÇÃO VISUAL VERDE POSITIVA
+   Hierarquia Estrita do Hero:
+   1. Pergunta de entrada: "TEM MÓVEIS USADOS PARA VENDER?"
+   2. Chamada Principal: "COMPRAMOS SEU MÓVEL USADO"
+   3. CTA WhatsApp Dominante com Microcópia
+   4. Proposta Comercial Integrada: "PAGAMENTO IMEDIATO"
+   5. Apoio Visual Coerente: Mosaico Comercial com Sofá, Geladeira e Armário
+   6. Área de Atendimento Discreta
    ========================================================================== */
 
 /* 1. RESET E DESIGN TOKENS */
@@ -39,22 +26,21 @@
   --color-whatsapp-hover: #1EBE5D;
   --color-whatsapp-active: #159847;
   --color-white: #FFFFFF;
-  --color-gray-bg: #F4F6F5;
+  --color-gray-bg: #F8FAF9;
   --color-gray-card: #FFFFFF;
-  --color-gray-border: #E5E7EB;
-  --color-text-dark: #202820;
+  --color-gray-border: #E2E8F0;
+  --color-text-dark: #1E2922;
   --color-text-muted: #4B5563;
   --color-navy: #27364A;
-  --color-red-accent: #ED1C24;
 
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-display: "Arial Black", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  --shadow-sm: 0 2px 6px rgba(22, 128, 60, 0.06);
+  --shadow-sm: 0 2px 6px rgba(22, 128, 60, 0.05);
   --shadow-card: 0 10px 25px -5px rgba(22, 128, 60, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
   --shadow-hover: 0 18px 32px -8px rgba(22, 128, 60, 0.16);
-  --shadow-wa: 0 10px 30px rgba(37, 211, 102, 0.42);
-  --shadow-green-glow: 0 8px 24px rgba(37, 199, 101, 0.35);
+  --shadow-wa: 0 10px 28px rgba(37, 211, 102, 0.42);
+  --shadow-wa-hover: 0 14px 34px rgba(37, 211, 102, 0.52);
 
   --radius-xs: 6px;
   --radius-sm: 10px;
@@ -80,7 +66,7 @@ body.green-positive-theme {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  padding-bottom: 74px; /* Barra fixa mobile */
+  padding-bottom: 74px; /* Barra móvel inferior */
 }
 
 @media (min-width: 820px) {
@@ -128,8 +114,8 @@ img {
 .top-positive-bar {
   background-color: var(--color-green-primary);
   color: var(--color-white);
-  padding: 9px 0;
-  font-size: 0.84rem;
+  padding: 8px 0;
+  font-size: 0.82rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -153,7 +139,7 @@ img {
   align-items: center;
   gap: 8px;
   font-weight: 800;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   letter-spacing: 0.05em;
   background: rgba(255, 255, 255, 0.16);
   padding: 3px 10px;
@@ -183,7 +169,7 @@ img {
 
 .top-locations {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
 }
 
@@ -191,11 +177,11 @@ img {
 .main-header {
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-gray-border);
-  padding: 14px 0;
+  padding: 12px 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .header-flex {
@@ -236,7 +222,7 @@ img {
 }
 
 .brand-sub-name {
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   color: var(--color-navy);
@@ -262,7 +248,7 @@ img {
   background-color: var(--color-whatsapp);
   border-color: var(--color-whatsapp);
   color: var(--color-white);
-  box-shadow: var(--shadow-green-glow);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
   transform: translateY(-1px);
 }
 
@@ -277,21 +263,23 @@ img {
   color: var(--color-white);
 }
 
-/* 4. HERO SECTION: VERDE POSITIVO COM COMPOSIÇÃO FOTOGRÁFICA RECONHECÍVEL */
+/* ==========================================================================
+   4. HERO REFINADO — HIERARQUIA RIGOROSA, IMPACTO E MOSAICO COERENTE
+   ========================================================================== */
 .hero-positive-section {
   position: relative;
-  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-green-surface) 100%);
-  padding: 48px 0 60px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5FBF6 100%);
+  padding: 40px 0 52px;
   border-bottom: 1px solid var(--color-gray-border);
   overflow: hidden;
 }
 
 .hero-ambience-glow {
   position: absolute;
-  top: -120px;
-  right: -100px;
-  width: 600px;
-  height: 600px;
+  top: -100px;
+  right: -80px;
+  width: 550px;
+  height: 550px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(37, 199, 101, 0.12) 0%, transparent 70%);
   pointer-events: none;
@@ -300,7 +288,7 @@ img {
 .hero-container-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 36px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -309,7 +297,7 @@ img {
 @media (min-width: 980px) {
   .hero-container-grid {
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 48px;
+    gap: 44px;
   }
 }
 
@@ -319,48 +307,39 @@ img {
   align-items: flex-start;
 }
 
-.badge-opportunity {
+/* 1. Pergunta de Entrada */
+.hero-entry-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background-color: var(--color-green-light);
-  color: var(--color-green-primary);
-  border: 1px solid rgba(22, 128, 60, 0.25);
+  border: 1px solid rgba(22, 128, 60, 0.2);
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.badge-icon-check {
+.pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-green-primary);
+}
+
+.pill-question {
   font-size: 0.85rem;
-  font-weight: 900;
-  color: var(--color-green-primary);
-}
-
-/* Chamada Comercial: Letras Grandes em Verde */
-.headline-hero-group {
-  margin-bottom: 24px;
-  width: 100%;
-}
-
-.headline-intro {
-  display: block;
-  font-size: 1.25rem;
   font-weight: 800;
-  color: var(--color-navy);
-  letter-spacing: -0.01em;
+  color: var(--color-green-primary);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  margin-bottom: 4px;
 }
 
+/* 2. Chamada Principal: COMPRAMOS SEU MÓVEL USADO */
 .headline-primary-green {
   display: flex;
   flex-direction: column;
-  line-height: 1;
-  margin-bottom: 18px;
+  line-height: 0.98;
+  margin-bottom: 16px;
 }
 
 .word-compramos {
@@ -385,9 +364,6 @@ img {
 }
 
 @media (min-width: 768px) {
-  .headline-intro {
-    font-size: 1.6rem;
-  }
   .word-compramos {
     font-size: 4.4rem;
   }
@@ -396,73 +372,21 @@ img {
   }
 }
 
-/* Card de Destaque: Pagamento Imediato */
-.payment-highlight-card {
-  position: relative;
-  background: var(--color-white);
-  border: 2px solid var(--color-green-vibrant);
-  border-radius: var(--radius-md);
-  padding: 14px 18px;
-  box-shadow: 0 6px 18px rgba(37, 199, 101, 0.18);
-  max-width: 480px;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.payment-badge-tag {
-  position: absolute;
-  top: -10px;
-  left: 16px;
-  background-color: var(--color-green-primary);
-  color: var(--color-white);
-  font-size: 0.68rem;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  padding: 2px 10px;
-  border-radius: var(--radius-pill);
-}
-
-.payment-main-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.icon-cash-instant {
-  width: 28px;
-  height: 28px;
-  color: var(--color-green-primary);
-  flex-shrink: 0;
-}
-
-.payment-text {
-  font-size: 1.45rem;
-  font-weight: 900;
-  color: var(--color-green-primary);
-  letter-spacing: -0.01em;
-}
-
-.payment-disclaimer {
-  display: block;
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  margin-top: 4px;
-}
-
 .hero-supporting-text {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--color-text-muted);
-  line-height: 1.55;
+  line-height: 1.5;
   max-width: 520px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
-/* Botão de WhatsApp em Verde Oficial com Pulso */
-.hero-cta-action-area {
+/* 3. CTA PRINCIPAL REFORÇADO (Acima da Dobra) */
+.hero-cta-group {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
+  margin-bottom: 24px;
 }
 
 .btn-wa-hero-positive {
@@ -476,8 +400,8 @@ img {
   padding: 16px 24px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-wa);
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  max-width: 500px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  max-width: 510px;
   width: 100%;
   min-height: 72px;
   overflow: hidden;
@@ -487,7 +411,7 @@ img {
 .btn-wa-hero-positive:hover {
   background-color: var(--color-whatsapp-hover);
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.5);
+  box-shadow: var(--shadow-wa-hover);
 }
 
 .btn-wa-hero-positive:active {
@@ -498,7 +422,7 @@ img {
 .btn-icon-circle {
   width: 44px;
   height: 44px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.22);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -528,7 +452,7 @@ img {
 }
 
 .btn-secondary-prompt {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.95);
   margin-top: 2px;
@@ -552,7 +476,7 @@ img {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
   animation: btn-shine 3.5s infinite;
 }
 
@@ -562,85 +486,183 @@ img {
   100% { left: 100%; }
 }
 
-.region-info-tag {
-  display: inline-flex;
+.cta-microcopy {
+  display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  background-color: var(--color-white);
-  border: 1px solid var(--color-gray-border);
-  padding: 8px 14px;
-  border-radius: var(--radius-sm);
-  max-width: 500px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #15803D;
+  padding-left: 4px;
 }
 
-.icon-pin-green {
-  width: 18px;
-  height: 18px;
+.icon-check-mini {
+  width: 16px;
+  height: 16px;
   color: var(--color-green-primary);
   flex-shrink: 0;
 }
 
-.region-info-tag strong {
+/* 4. Proposta Comercial Integrada: PAGAMENTO IMEDIATO */
+.payment-integrated-strip {
+  position: relative;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-green-vibrant);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  box-shadow: 0 4px 14px rgba(22, 128, 60, 0.08);
+  max-width: 510px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.payment-badge-pill {
+  position: absolute;
+  top: -9px;
+  left: 14px;
+  background-color: var(--color-green-primary);
+  color: var(--color-white);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  padding: 1px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.payment-content-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.payment-icon-box {
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-green-light);
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   color: var(--color-green-primary);
 }
 
-/* Coluna Direita: Composição Fotográfica com Sofá, Geladeira e Armário */
+.payment-icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--color-green-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.payment-sub {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* 5. Área de Atendimento como Selo Discreto */
+.region-subtle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  background-color: rgba(22, 128, 60, 0.06);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  max-width: 510px;
+}
+
+.icon-pin-discreet {
+  width: 16px;
+  height: 16px;
+  color: var(--color-green-primary);
+  flex-shrink: 0;
+}
+
+.region-subtle-badge strong {
+  color: var(--color-green-primary);
+}
+
+/* ==========================================================================
+   COLUNA DIREITA DO HERO: MOSAICO COMERCIAL COERENTE E ALINHADO
+   ========================================================================== */
 .hero-visual-composition {
   position: relative;
   width: 100%;
 }
 
-.composition-container {
+.commercial-mosaic {
   position: relative;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.mosaic-column-side {
+  display: flex;
+  flex-direction: column;
   gap: 14px;
 }
 
-.comp-card {
+.mosaic-card {
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-card);
+  border: 1.5px solid var(--color-gray-border);
+  background-color: #E2E8F0;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.mosaic-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-primary-sofa {
+  min-height: 380px;
   border: 2px solid var(--color-white);
-  background-color: #E5E7EB;
 }
 
-.card-sofa {
-  grid-row: span 2;
-  height: 380px;
-}
-
-.card-fridge {
+.card-secondary-fridge {
   height: 183px;
-  border-color: var(--color-green-vibrant);
+  border: 1.5px solid var(--color-green-vibrant);
 }
 
-.card-wardrobe {
+.card-secondary-wardrobe {
   height: 183px;
 }
 
-.comp-img {
+.mosaic-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.comp-card:hover .comp-img {
+.mosaic-card:hover .mosaic-photo {
   transform: scale(1.04);
 }
 
-.comp-chip {
+.mosaic-tag {
   position: absolute;
   bottom: 8px;
   left: 8px;
   right: 8px;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
   padding: 5px 10px;
   border-radius: var(--radius-xs);
   font-size: 0.74rem;
@@ -650,26 +672,27 @@ img {
   align-items: center;
   gap: 6px;
   justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-.comp-chip.chip-highlight {
+.mosaic-tag.tag-accent {
   background: var(--color-green-primary);
   color: var(--color-white);
 }
 
-.chip-dot {
+.tag-status-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: var(--color-green-vibrant);
 }
 
-.chip-highlight .chip-dot {
+.tag-accent .tag-status-dot {
   background-color: var(--color-white);
 }
 
-/* Selo Positivo de Avaliação */
-.positive-guarantee-badge {
+/* Selo Flutuante de Confiança e Agilidade */
+.floating-direct-badge {
   position: absolute;
   top: -12px;
   right: -8px;
@@ -683,25 +706,43 @@ img {
   gap: 8px;
   border: 2px solid var(--color-white);
   z-index: 5;
+  animation: float-gentle 4s ease-in-out infinite;
 }
 
-.badge-icon-star {
-  color: #FCD34D;
-  font-size: 1.1rem;
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
-.badge-copy {
+.direct-icon-wrap {
+  width: 22px;
+  height: 22px;
+  background-color: var(--color-green-vibrant);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.direct-icon-wrap svg {
+  width: 14px;
+  height: 14px;
+}
+
+.direct-badge-text {
   display: flex;
   flex-direction: column;
   line-height: 1.05;
 }
 
-.badge-copy strong {
+.badge-title {
   font-size: 0.78rem;
-  letter-spacing: 0.04em;
+  font-weight: 900;
+  letter-spacing: 0.03em;
 }
 
-.badge-copy span {
+.badge-sub {
   font-size: 0.68rem;
   color: var(--color-green-light);
 }
@@ -1415,7 +1456,7 @@ img {
 
 .animate-slide-up {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(18px);
   animation: slideUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -1447,7 +1488,8 @@ img {
   }
   .ticker-inner,
   .btn-glow-pulse,
-  .pulse-green-dot {
+  .pulse-green-dot,
+  .floating-direct-badge {
     animation: none !important;
   }
 }
@@ -1455,23 +1497,36 @@ img {
 /* 13. RESPONSIVIDADE ESPECÍFICA (Telas 375px a 430px) */
 @media (max-width: 430px) {
   .word-compramos {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
   .word-target {
-    font-size: 2.6rem;
-  }
-  .payment-text {
-    font-size: 1.25rem;
+    font-size: 2.5rem;
   }
   .btn-main-prompt {
     font-size: 1.05rem;
   }
-  .card-sofa {
-    height: 250px;
+  .btn-wa-hero-positive {
+    padding: 14px 16px;
+    gap: 12px;
   }
-  .card-fridge,
-  .card-wardrobe {
-    height: 118px;
+  .commercial-mosaic {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .card-primary-sofa {
+    min-height: 220px;
+  }
+  .mosaic-column-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .card-secondary-fridge,
+  .card-secondary-wardrobe {
+    height: 140px;
+  }
+  .payment-title {
+    font-size: 1.05rem;
   }
   .showcase-title,
   .how-title {
