@@ -44,7 +44,7 @@ const htmlContent = fs.readFileSync(indexPath, 'utf-8');
 const cssContent = fs.readFileSync(stylePath, 'utf-8');
 
 // 2. Chamada Principal Solicitada
-assert(htmlContent.includes('COMPRAMOS') && htmlContent.includes('SEU MÓVEL USADO'), 'Contém a chamada exata solicitada: "COMPRAMOS SEU MÓVEL USADO"');
+assert(htmlContent.includes('COMPRAMOS') && htmlContent.includes('O SEU MÓVEL USADO'), 'Contém a chamada exata solicitada: "COMPRAMOS O SEU MÓVEL USADO"');
 assert(htmlContent.includes('PAGAMENTO IMEDIATO'), 'Contém o destaque comercial solicitado: "PAGAMENTO IMEDIATO"');
 assert(htmlContent.includes('MANDAR FOTOS NO WHATSAPP'), 'CTA principal mantém: "MANDAR FOTOS NO WHATSAPP"');
 
