@@ -262,10 +262,34 @@ img {
   text-decoration: none;
   font-weight: 800;
   font-size: 0.85rem;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: var(--radius-pill);
   border: 1.5px solid var(--color-green-primary);
   transition: all var(--transition-normal);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pill-number {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .brand-main-name {
+    font-size: 1.15rem;
+  }
+  .brand-sub-name {
+    font-size: 0.62rem;
+  }
+  .header-wa-pill {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    gap: 4px;
+  }
+  .brand-symbol {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 @media (min-width: 768px) {
