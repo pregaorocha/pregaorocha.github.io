@@ -1299,21 +1299,21 @@ img {
   background-color: var(--color-whatsapp);
   color: var(--color-white);
   text-decoration: none;
-  font-size: 1.15rem;
+  font-size: clamp(0.92rem, 3.2vw, 1.25rem);
   font-weight: 900;
-  padding: 16px 24px;
+  padding: 16px 28px;
   border-radius: var(--radius-pill);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 440px;
+  width: auto;
+  max-width: 100%;
+  white-space: nowrap;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal), background-color var(--transition-normal);
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: 768px) {
   .btn-final-whatsapp-massive {
-    font-size: 1.25rem;
-    padding: 18px 36px;
+    padding: 18px 40px;
   }
 }
 
