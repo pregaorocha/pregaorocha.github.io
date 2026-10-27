@@ -58,4 +58,25 @@ document.addEventListener('DOMContentLoaded', () => {
       revealObserver.observe(card);
     });
   }
+
+  // Interatividade dos cards de móveis: selecionar ao clicar
+  const galleryCards = document.querySelectorAll('.gallery-card');
+  galleryCards.forEach(card => {
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-pressed', 'false');
+
+    const toggleSelection = () => {
+      const isSelected = card.classList.toggle('is-selected');
+      card.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+    };
+
+    card.addEventListener('click', toggleSelection);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleSelection();
+      }
+    });
+  });
 });
