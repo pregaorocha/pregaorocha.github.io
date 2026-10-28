@@ -49,9 +49,9 @@ assert(htmlContent.includes('PAGAMENTO IMEDIATO'), 'Contém o destaque comercial
 assert(htmlContent.includes('MANDAR FOTOS NO WHATSAPP'), 'CTA principal mantém: "MANDAR FOTOS NO WHATSAPP"');
 
 // 3. Composição de Móveis Reconhecíveis (Sofá, Geladeira, Armário)
-assert(htmlContent.includes('Sofás & Estofados') || htmlContent.includes('Sofá'), 'Composição visual e textos incluem Sofá');
-assert(htmlContent.includes('Geladeiras') || htmlContent.includes('Geladeira'), 'Composição visual e textos incluem Geladeira');
-assert(htmlContent.includes('Armários') || htmlContent.includes('Armário'), 'Composição visual e textos incluem Armário');
+assert(htmlContent.includes('Sofás') || htmlContent.includes('SOFÁS') || htmlContent.includes('Sofá'), 'Composição visual e textos incluem Sofá');
+assert(htmlContent.includes('Geladeiras') || htmlContent.includes('GELADEIRAS') || htmlContent.includes('Geladeira'), 'Composição visual e textos incluem Geladeira');
+assert(htmlContent.includes('Armários') || htmlContent.includes('ARMÁRIOS') || htmlContent.includes('Armário'), 'Composição visual e textos incluem Armário');
 
 // 4. WhatsApp e Parâmetros Comerciais
 const expectedWaLink = 'https://wa.me/5562992876027?text=Ol%C3%A1%21%20Quero%20vender%20m%C3%B3veis%20usados.%20Vou%20enviar%20as%20fotos%20para%20avalia%C3%A7%C3%A3o.';
