@@ -468,8 +468,8 @@ img {
   background-color: var(--color-whatsapp);
   color: #FFFFFF;
   text-decoration: none;
-  padding: 16px 22px;
-  border-radius: var(--radius-sm);
+  padding: 16px 28px;
+  border-radius: var(--radius-pill);
   font-weight: 900;
   font-size: clamp(1rem, 3.8vw, 1.3rem);
   letter-spacing: 0.02em;
