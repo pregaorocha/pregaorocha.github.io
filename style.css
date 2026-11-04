@@ -492,20 +492,21 @@ img {
 }
 
 .btn-strip-wa-icon {
-  width: 28px;
-  height: 28px;
-  background-color: rgba(255, 255, 255, 0.25);
+  width: 38px;
+  height: 38px;
+  background-color: #FFFFFF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
 .btn-strip-wa-icon svg {
-  width: 18px;
-  height: 18px;
-  color: #FFFFFF;
+  width: 22px;
+  height: 22px;
+  color: var(--color-whatsapp);
 }
 
 .btn-strip-text {
