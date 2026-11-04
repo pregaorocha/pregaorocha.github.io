@@ -511,12 +511,14 @@ img {
 .btn-strip-text {
   flex-grow: 1;
   text-align: center;
+  color: #000000;
 }
 
 .btn-strip-arrow {
   width: 22px;
   height: 22px;
   flex-shrink: 0;
+  color: #000000;
   transition: transform var(--transition-normal);
 }
 
