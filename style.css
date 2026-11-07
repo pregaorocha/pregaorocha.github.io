@@ -535,9 +535,10 @@ img {
   color: #000000;
   font-family: 'Impact', 'Arial Black', var(--font-display);
   font-weight: 900;
+  font-style: italic;
   font-size: clamp(0.95rem, 3.2vw, 1.15rem);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-transform: none;
   line-height: 1;
 }
 
